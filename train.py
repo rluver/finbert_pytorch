@@ -127,9 +127,8 @@ class FinancialPhraseBankDataModule(pl.LightningDataModule):
             )
     
     
-    
-    
-if __name__ == '__main__':
+
+def main():
     
     financial_phrase_dataset = pd.read_csv('dataset/financial_phrase_bank/all-data.csv', encoding = 'latin-1', names = ['sentiment', 'phrase']).drop_duplicates().dropna().reset_index(drop = True)
     financial_phrase_dataset.sentiment = financial_phrase_dataset.sentiment.apply(lambda x: categorizer(x))
@@ -166,3 +165,9 @@ if __name__ == '__main__':
         )
     
     trainer.fit(model, data_module)
+    
+    
+    
+    
+if __name__ == '__main__':
+    main()
