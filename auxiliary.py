@@ -14,3 +14,9 @@ def categorizer(label):
         return 1
     elif label == 'negative':
         return 0
+
+
+
+def convert_idx_to_sentiment(idx):
+    
+    return ['negative', 'neutral', 'positive'][idx]
