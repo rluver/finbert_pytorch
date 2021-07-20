@@ -10,6 +10,7 @@ from finbert import FinBERT
 from auxiliary import categorizer
 
 import pandas as pd
+import torch
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
