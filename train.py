@@ -17,6 +17,7 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer
+from transformers.optimization import AdamW, get_linear_schedule_with_warmup
 
 
 
